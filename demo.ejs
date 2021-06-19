@@ -1,0 +1,71 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+<div class="jumbotron">
+    <h1>Your Recipes</h1>
+    <p> This is where your recipes are stored!</p>
+</div>
+
+<h2>Your go-to Recipes</h2>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+      <th>Baking/Dessert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Scambled Eggs</td>
+      <td>Turkey Cheese Panini</td>
+      <td>Sausage and Veggies</td>
+      <td>Crumble Cake</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Add a recipe to your collection:</h2>
+
+<form method="post" action="/showformdata" class="bg-info">
+  Enter your recipe title:
+  <input type="text"
+         name="name"
+         placeholder="Recipe name"><br>
+  Enter the link to your recipe:
+  <input type="text"
+         name="link"
+         placeholder="Recipe link"><br>
+
+  What type of recipe is this?
+  <select name="recipeType">
+    <option>Breakfast</option>
+    <option>Lunch</option>
+    <option>Dinner</option>
+    <option>Baking/Dessert</option>
+  </select>
+
+  How challenging is this recipe?:<br>
+   easy <input type="radio" name="level" value="easy"><br>
+   intermediate  <input type="radio" name="level" value="medium"><br>
+   difficult <input type="radio" name="level" value="hard"><br>
+   <hr>
+   <br>
+  <input type="submit" value="Add Recipe">
+</form>
+
+<hr>
+<h2>Your Favorite Recipe Sites</h2>
+<ol>
+     <li><a href="https://www.chelseasmessyapron.com/">Messy Apron</a></li>
+     <li><a href="https://www.allrecipes.com/">All Recipes</a></li>
+</ol>
+<hr>
+
+
+<div>
+  <img src="images/cooking.png">
+</div>
+
+
+<%- include('bootfooter') -%>
